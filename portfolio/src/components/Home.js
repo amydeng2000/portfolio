@@ -14,7 +14,7 @@ export default function Home() {
           Hey there!
         </h1>
         <h1 className="text-center text-6xl text-white font-bold cursive leading-none lg: leadning-snug home-name">
-          I'm Amy
+          I'm Amy.
         </h1>
       </section>
     </main>
