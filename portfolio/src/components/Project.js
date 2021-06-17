@@ -36,20 +36,19 @@ export default function Project() {
         <h2 className="text-lg text-grey-600 flex justify-center mb-12">
           Here're some things that I've been working on!
         </h2>
-        <section className="grid grid-cols-2 gap-8">
+        <section className="grid lg:grid-cols-2 md:grid-cols-1 gap-16">
           {projectData &&
             projectData.map((project, index) => (
-              <article
-                className="relative rounded-lg shadow-xl bg-white"
-                key={index}
-              >
-                <img
-                  src={project.mainImage.asset.url}
-                  alt={project.mainImage.alt}
-                  className="rounded-lg"
-                />
-                <section className="ml-8 mr-8">
-                  <h3 className="text-grey-800 text-3xl font-bold mb-2 hover:text-pink-300">
+              <article className="relative" key={index}>
+                <span className="block h-96 relative rounded shadow leading-snug">
+                  <img
+                    src={project.mainImage.asset.url}
+                    alt={project.mainImage.alt}
+                    className="w-full h-full rounded-lg transition ease-in duration-300 transform hover:scale-105"
+                  />
+                </span>
+                <section className="mt-4">
+                  <h3 className="text-grey-800 text-2xl font-bold mb-2">
                     <a
                       href={project.link}
                       alt={project.title}
@@ -59,31 +58,25 @@ export default function Project() {
                       {project.title}
                     </a>
                   </h3>
-                  <div className="text-grey-500 text-xs space-x-4">
+                  <div className="text-grey-500 text-s space-x-4 mb-2">
                     <span>
                       <strong className="font-bold">Date</strong>:{' '}
                       {new Date(project.date).toLocaleDateString()}
                     </span>
                     <span>
-                      <strong className="font-bold">Type</strong>:{' '}
-                      {project.projectType}
-                    </span>
-                    <p className="my-6 text-lg text-grey-700 leading-relaxed">
+                      <strong className="font-bold">Description</strong>:{' '}
                       {project.description}
-                    </p>
-                    <a
-                      href={project.link}
-                      alt={project.title}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-pink-300 font-bold hover:underline hover:text-pink-400"
-                    >
-                      View The Project{' '}
-                    </a>
-                    <span role="img" area-label="right-pointer">
-                      👉
                     </span>
                   </div>
+                  <a
+                    href={project.link}
+                    alt={project.title}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-indigo-500 font-bold hover:text-pink-300"
+                  >
+                    View The Project ►
+                  </a>
                 </section>
               </article>
             ))}
