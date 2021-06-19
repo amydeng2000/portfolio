@@ -33,7 +33,6 @@ export default function Project() {
           {' '}
           My Projects
         </h1>
-        <h2 className="text-lg text-grey-600 flex justify-center mb-12"></h2>
         <section className="grid lg:grid-cols-2 md:grid-cols-1 gap-16">
           {projectData &&
             projectData.map((project, index) => (
