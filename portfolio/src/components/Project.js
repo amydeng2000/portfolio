@@ -33,9 +33,7 @@ export default function Project() {
           {' '}
           My Projects
         </h1>
-        <h2 className="text-lg text-grey-600 flex justify-center mb-12">
-          Here're some things that I've been working on!
-        </h2>
+        <h2 className="text-lg text-grey-600 flex justify-center mb-12"></h2>
         <section className="grid lg:grid-cols-2 md:grid-cols-1 gap-16">
           {projectData &&
             projectData.map((project, index) => (
@@ -73,7 +71,7 @@ export default function Project() {
                     alt={project.title}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-indigo-500 font-bold hover:text-pink-300"
+                    className="text-indigo-400 font-bold hover:text-pink-300"
                   >
                     View The Project ►
                   </a>
