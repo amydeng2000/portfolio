@@ -33,7 +33,7 @@ export default function Project() {
           {' '}
           My Projects
         </h1>
-        <section className="grid lg:grid-cols-2 md:grid-cols-1 gap-16">
+        <section className="grid lg:grid-cols-2 md:grid-cols-1 gap-16 mt-8">
           {projectData &&
             projectData.map((project, index) => (
               <article className="relative" key={index}>

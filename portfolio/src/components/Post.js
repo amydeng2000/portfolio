@@ -28,7 +28,7 @@ export default function Post() {
         <h1 className="text-5xl flex justify-center cursive mb-2">
           Journals &amp; Blogs
         </h1>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
           {postData &&
             postData.map((post, index) => (
               <article>
