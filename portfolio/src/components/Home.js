@@ -3,20 +3,20 @@ import image from '../bgimg.png'
 
 export default function Home() {
   return (
-    <main>
+    <div className="w-full h-full">
       <img
         src={image}
         alt="background img"
         className="absolute object-cover w-full h-full"
       />
-      <section className="relative justify-center flex-row min-h-screen pt-12 lg:pt-64 px-8 ">
-        <h1 className="text-center text-6xl text-white font-bold cursive leading-none lg: leadning-snug home-name">
+      <div className="relative justify-center flex-row min-h-full pt-12 lg:pt-64">
+        <h1 className="text-center text-2xl text-white font-bold cursive leading-none lg:leadning-snug home-name">
           Hey there!
         </h1>
-        <h1 className="text-center text-6xl text-white font-bold cursive leading-none lg: leadning-snug home-name">
+        <h1 className="text-center text-2xl text-white font-bold cursive leading-none lg:leadning-snug home-name">
           I'm Amy.
         </h1>
-      </section>
-    </main>
+      </div>
+    </div>
   )
 }
