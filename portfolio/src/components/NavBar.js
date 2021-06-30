@@ -6,7 +6,7 @@ export default function NavBar() {
   console.log(window.innerWidth)
   return (
     <header className="bg-indigo-400">
-      <div className="container mx-auto flex">
+      <div className="container mx-auto flex justify-between">
         <nav className="flex">
           <NavLink
             to="/"
@@ -18,7 +18,7 @@ export default function NavBar() {
           </NavLink>
         </nav>
         {window.innerWidth > 540 ? (
-          <div className="flex px-3 py-3 my-6 flex justify-between w-full">
+          <div className="flex px-3 py-3 my-6 justify-between w-full">
             <nav className="">
               <NavLink
                 to="/post"
@@ -70,7 +70,21 @@ export default function NavBar() {
             </nav>
           </div>
         ) : (
-          <div></div>
+          <div class="py-6 px-3">
+            <button class="inline-block w-8 h-8 text-gray-800 p-1">
+              <svg
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
         )}
       </div>
     </header>
