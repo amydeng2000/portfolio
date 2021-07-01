@@ -25,7 +25,7 @@ export default function Post() {
   return (
     <main className="bg-blue-100 min-h-screen p-12">
       <section className="container mx-auto">
-        <h1 className="text-5xl flex justify-center cursive mb-2">
+        <h1 className="text-3xl flex justify-center cursive mb-2 lg:text-5xl md:text-4xl">
           Journals &amp; Blogs
         </h1>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">

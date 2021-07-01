@@ -29,7 +29,7 @@ export default function Project() {
   return (
     <main className="bg-blue-100 min-h-screen p-12">
       <section className="container mx-auto">
-        <h1 className="text-5xl flex justify-center cursive mb-2">
+        <h1 className="text-3xl flex justify-center cursive mb-2 lg:text-5xl md:text-4xl">
           {' '}
           My Projects
         </h1>
@@ -37,7 +37,7 @@ export default function Project() {
           {projectData &&
             projectData.map((project, index) => (
               <article className="relative" key={index}>
-                <span className="block h-96 relative rounded shadow leading-snug">
+                <span className="block h-54 md:h-96 relative rounded shadow leading-snug">
                   <img
                     src={project.mainImage.asset.url}
                     alt={project.mainImage.alt}
@@ -45,7 +45,7 @@ export default function Project() {
                   />
                 </span>
                 <section className="mt-4">
-                  <h3 className="text-grey-800 text-2xl font-bold mb-2">
+                  <h3 className="text-grey-800 text-2xl md:text-3xl font-bold mb-2">
                     <a
                       href={project.link}
                       alt={project.title}
