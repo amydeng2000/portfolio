@@ -38,21 +38,22 @@ export default function SinglePost() {
   if (!singlePost) return <div>Loading...</div>
 
   return (
-    <main className="bg-blue-100 min-h-screen p-12">
-      <article className="container shadow-lg mx-auto bg-white rounded-lg">
+    <main className="bg-blue-100 min-h-screen p-8 md:p-12">
+      <article className="container shadow-lg mx-auto bg-white rounded-xl">
         <header className="relative">
           <div className="absolute h-full w-full flex items-center justify-center p-8">
-            <div className="bg-white bg-opacity-75 rounded p-12">
-              <h1 className="cursive text-3xl lg:text-6xl mb-4">
+            <div className="rounded-xl p-5 md:p-12">
+              {/* bg-white bg-opacity-75  */}
+              <h1 className="cursive text-2xl text-center md:text-6xl mb-4">
                 {singlePost.title}
               </h1>
               <div className="flex justify-center text-grey-800">
                 <img
                   src={urlFor(singlePost.authorImage).url()}
                   alt={singlePost.name}
-                  className="w-10 h-10 rounded-full"
+                  className="w-7 h-7 md:w-10 md:h-10 rounded-full"
                 />
-                <p className="cursive flex items-center pl-2 text-2xl">
+                <p className="cursive flex items-center pl-2 text-xl md:text-2xl">
                   {singlePost.name}
                 </p>
               </div>
@@ -61,11 +62,11 @@ export default function SinglePost() {
           <img
             src={singlePost.mainImage.asset.url}
             alt={singlePost.title}
-            className="w-full object-cover rounded-t"
-            style={{ height: '400px' }}
+            className="w-full h-40 md:h-80 object-cover rounded-t-xl"
+            // style={{ height: '400px' }}
           />
         </header>
-        <div className="px-16 lg:px-48 py-12 lg:py-20 prose lg:prose-xl max-w-full">
+        <div className="px-10 py-6 md:px-16 md:py-12 lg:px-48 lg:py-20 prose-sm md:prose lg:prose-xl max-w-full">
           <BlockContent
             blocks={singlePost.body}
             projectId="t6ywgvw0"

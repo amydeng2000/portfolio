@@ -45,9 +45,8 @@ export default function Home() {
     // </div>
 
     <div className="w-full h-full">
-      {/* <img src={smoke} alt="background snoke" className="absolute w-full" /> */}
-      <div className="p-10 container mx-auto relative">
-        <section className="bg-white bg-opacity-50 rounded-lg shadow-2xl justify-center md:flex p-10 md:p-20">
+      <div className="p-10 lg:my-20 container mx-auto relative">
+        <section className="bg-blue-100 rounded-lg shadow-2xl justify-center md:flex p-10 md:p-20">
           <img
             src={urlFor(author.authorImage).url()}
             className="rounded w-45 h-60 mx-auto md:mx-8 md:w-72 md:h-96"
@@ -55,7 +54,7 @@ export default function Home() {
           />
           <div className="text-lg flex flex-col justify-center">
             <h1 className="cursive text-3xl text-center md:text-4xl lg:text-6xl my-4">
-              Hey! I'm <span className="text-black">{author.name}</span>.
+              👋 Hey! I'm <span className="text-black">{author.name}</span>.
             </h1>
             <div className="prose lg:prose-xl md:ml-8 text-black">
               <BlockContent

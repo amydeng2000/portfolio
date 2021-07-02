@@ -148,7 +148,7 @@ export default function NavBar() {
             <li className="nav-item">
               <NavLink
                 to="/post"
-                activeClassName="text-white"
+                activeClassName="text-gray-500"
                 onClick={() => setNavbarOpen(false)}
                 className="px-6 py-2 flex items-center text-xs font-bold leading-snug text-black hover:text-gray-500"
               >
@@ -158,7 +158,7 @@ export default function NavBar() {
             <li className="nav-item">
               <NavLink
                 to="/project"
-                activeClassName="text-white"
+                activeClassName="text-gray-500"
                 onClick={() => setNavbarOpen(false)}
                 className="px-6 py-2 flex items-center text-xs font-bold leading-snug text-black hover:text-gray-500"
               >

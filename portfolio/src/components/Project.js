@@ -41,7 +41,7 @@ export default function Project() {
                   <img
                     src={project.mainImage.asset.url}
                     alt={project.mainImage.alt}
-                    className="w-full h-full rounded-lg transition ease-in duration-300 transform hover:scale-105"
+                    className="w-full h-full rounded-lg transition ease-in duration-300 transform"
                   />
                 </span>
                 <section className="mt-4">
@@ -70,7 +70,7 @@ export default function Project() {
                     alt={project.title}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-indigo-400 font-bold hover:text-pink-300"
+                    className="text-gray-500 font-bold hover:text-black"
                   >
                     View The Project ►
                   </a>
