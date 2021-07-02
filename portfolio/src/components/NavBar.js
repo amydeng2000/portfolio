@@ -67,42 +67,40 @@ export default function NavBar() {
   // )
 
   return (
-    <header className="bg-indigo-400">
+    //bg-indigo-400
+    <header className="shadow">
       <div className="container mx-auto flex justify-between">
         <nav className="flex">
           <NavLink
             to="/"
             exact
-            activeClassName="text-pink-300"
-            className="inline-flex items-center py-4 px-4 mr-4 text-white hover:text-pink-300 text-4xl font-bold cursive tracking-widset"
+            className="inline-flex items-center py-4 px-4 mr-4 text-black hover:text-gray-500 text-4xl font-bold cursive tracking-widset"
           >
             Amy
           </NavLink>
         </nav>
         {window.innerWidth > 540 ? (
-          <div className="flex px-3 py-3 my-6 justify-between w-full">
+          <div className="flex px-3 py-3 justify-between w-full">
             <nav className="">
               <NavLink
                 to="/post"
-                activeClassName="text-white"
-                className="inline-flex items-center py-3 px-3 my-6 rounded text-white font-bold hover:text-pink-300"
+                className="inline-flex items-center py-3 px-3 my-4 rounded text-black font-bold hover:text-gray-500"
               >
                 Writings
               </NavLink>
               <NavLink
                 to="/project"
-                activeClassName="text-white"
-                className="inline-flex items-center py-3 px-3 my-6 rounded text-white font-bold hover:text-pink-300"
+                className="inline-flex items-center py-3 px-3 my-4 rounded text-black font-bold hover:text-gray-500"
               >
                 Projects
               </NavLink>
-              <NavLink
+              {/* <NavLink
                 to="/about"
                 activeClassName="text-white"
                 className="inline-flex items-center py-3 px-3 my-6 rounded text-white font-bold hover:text-pink-300"
               >
                 About
-              </NavLink>
+              </NavLink> */}
             </nav>
             <nav className="inline-flex items-center">
               <SocialIcon
@@ -110,7 +108,7 @@ export default function NavBar() {
                 className="ml-6"
                 target="_blank"
                 fgColor="#fff"
-                bgColor="#F9A8D4"
+                bgColor="#6b7280"
                 style={{ height: 35, width: 35 }}
               />
               <SocialIcon
@@ -118,7 +116,7 @@ export default function NavBar() {
                 className="ml-6"
                 target="_blank"
                 fgColor="#fff"
-                bgColor="#F9A8D4"
+                bgColor="#6b7280"
                 style={{ height: 35, width: 35 }}
               />
               <SocialIcon
@@ -126,14 +124,14 @@ export default function NavBar() {
                 className="ml-6"
                 target="_blank"
                 fgColor="#fff"
-                bgColor="#F9A8D4"
+                bgColor="#6b7280"
                 style={{ height: 35, width: 35 }}
               />
             </nav>
           </div>
         ) : (
           <button
-            className="text-white cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+            className="text-black cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
             type="button"
             onClick={() => setNavbarOpen(!navbarOpen)}
           >
@@ -152,7 +150,7 @@ export default function NavBar() {
                 to="/post"
                 activeClassName="text-white"
                 onClick={() => setNavbarOpen(false)}
-                className="px-6 py-2 flex items-center text-xs font-bold leading-snug text-white hover:text-pink-300"
+                className="px-6 py-2 flex items-center text-xs font-bold leading-snug text-black hover:text-gray-500"
               >
                 Writings
               </NavLink>
@@ -162,21 +160,21 @@ export default function NavBar() {
                 to="/project"
                 activeClassName="text-white"
                 onClick={() => setNavbarOpen(false)}
-                className="px-6 py-2 flex items-center text-xs font-bold leading-snug text-white hover:text-pink-300"
+                className="px-6 py-2 flex items-center text-xs font-bold leading-snug text-black hover:text-gray-500"
               >
                 Projects
               </NavLink>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <NavLink
                 to="/about"
                 activeClassName="text-white"
                 onClick={() => setNavbarOpen(false)}
-                className="px-6 py-2 flex items-center text-xs font-bold leading-snug text-white hover:text-pink-300"
+                className="px-6 py-2 flex items-center text-xs font-bold leading-snug text-white hover:text-gray-500"
               >
                 About
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
       ) : (
