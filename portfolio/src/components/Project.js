@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import sanityClient from '../client.js'
+import React, { useState, useEffect } from "react";
+import sanityClient from "../client.js";
 
 export default function Project() {
-  const [projectData, setProjectData] = useState(null)
+  const [projectData, setProjectData] = useState(null);
   useEffect(() => {
     sanityClient
       .fetch(
@@ -20,17 +20,17 @@ export default function Project() {
                 },
                 alt
             }
-        }`,
+        }`
       )
       .then((data) => setProjectData(data))
-      .catch(console.error)
-  }, [])
+      .catch(console.error);
+  }, []);
 
   return (
     <main className="bg-blue-100 min-h-screen p-12">
       <section className="container mx-auto">
         <h1 className="text-5xl flex justify-center cursive mb-2">
-          {' '}
+          {" "}
           My Projects
         </h1>
         <section className="grid lg:grid-cols-2 md:grid-cols-1 gap-16 mt-8">
@@ -56,12 +56,12 @@ export default function Project() {
                     </a>
                   </h3>
                   <div className="text-grey-500 text-s space-x-4 mb-2">
-                    <span>
+                    {/* <span>
                       <strong className="font-bold">Date</strong>:{' '}
                       {new Date(project.date).toLocaleDateString()}
-                    </span>
+                    </span> */}
                     <span>
-                      <strong className="font-bold">Description</strong>:{' '}
+                      <strong className="font-bold">Description</strong>:{" "}
                       {project.description}
                     </span>
                   </div>
@@ -80,5 +80,5 @@ export default function Project() {
         </section>
       </section>
     </main>
-  )
+  );
 }

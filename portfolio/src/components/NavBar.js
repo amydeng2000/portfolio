@@ -1,9 +1,9 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import { SocialIcon } from 'react-social-icons'
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { SocialIcon } from "react-social-icons";
 
 export default function NavBar() {
-  console.log(window.innerWidth)
+  console.log(window.innerWidth);
   return (
     <header className="bg-indigo-400">
       <div className="container mx-auto flex justify-between">
@@ -18,7 +18,7 @@ export default function NavBar() {
           </NavLink>
         </nav>
         {window.innerWidth > 540 ? (
-          <div className="flex px-3 py-3 my-6 justify-between w-full">
+          <div className="flex px-2 py-2 my-2 justify-between w-full">
             <nav className="">
               <NavLink
                 to="/post"
@@ -88,5 +88,5 @@ export default function NavBar() {
         )}
       </div>
     </header>
-  )
+  );
 }
